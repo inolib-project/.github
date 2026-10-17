@@ -15,8 +15,8 @@ body:
   - type: input
     id: expert
     attributes:
-      label: Expert nommé
-      description: L'expert ou la séance qui exécutera ce ticket.
+      label: Responsable nommé
+      description: Le responsable ou la séance qui exécutera ce ticket.
     validations:
       required: true
   - type: textarea
@@ -75,7 +75,11 @@ body:
     id: route
     attributes:
       label: Route
-      description: Les grandes étapes, dans l'ordre, et les gestes sensibles qu'elles portent. Un petit ticket sans enjeu tient en une ligne.
+      description: Les grandes étapes, dans l'ordre, une par case, et les gestes sensibles qu'elles portent. Le responsable coche chaque case quand l'étape est faite. Un petit ticket sans enjeu tient en une ligne.
+      value: |
+        - [ ] Étape 1
+        - [ ] Étape 2
+        - [ ] Étape 3
     validations:
       required: true
   - type: textarea
