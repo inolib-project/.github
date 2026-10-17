@@ -1,0 +1,115 @@
+name: Ticket
+description: Un ticket au modèle de la charte, en français. Le type se choisit dans la case « Type » de la colonne de côté.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Chaque rubrique dit quelque chose de vérifiable : une mesure, une commande, un critère avec sa preuve. Une rubrique sans objet s'écrit « sans objet », avec son motif.
+  - type: textarea
+    id: demandeur
+    attributes:
+      label: Qui a demandé, avec ses mots
+      description: Le nom du demandeur, la date, et sa demande citée telle qu'elle a été dite.
+    validations:
+      required: true
+  - type: input
+    id: expert
+    attributes:
+      label: Expert nommé
+      description: L'expert ou la séance qui exécutera ce ticket.
+    validations:
+      required: true
+  - type: textarea
+    id: resume
+    attributes:
+      label: Résumé
+      description: Ce qu'il faut faire, en deux ou trois phrases.
+    validations:
+      required: true
+  - type: dropdown
+    id: classe-de-valeur
+    attributes:
+      label: Classe de valeur
+      description: Si ce ticket est fini, qu'est-ce qui change demain matin ? Choisis la première classe qui s'applique.
+      options:
+        - Ça rapporte
+        - Ça se sent
+        - Ça débloque
+        - Ça protège
+        - C'est interne
+    validations:
+      required: true
+  - type: textarea
+    id: pourquoi
+    attributes:
+      label: Pourquoi
+      description: La raison d'être du ticket, et ce qui se passe s'il n'est pas fait.
+    validations:
+      required: true
+  - type: textarea
+    id: aujourdhui
+    attributes:
+      label: Aujourd'hui
+      description: L'état réel, mesuré, avec la commande ou la source de chaque chiffre et sa date.
+    validations:
+      required: true
+  - type: textarea
+    id: voulu
+    attributes:
+      label: Voulu
+      description: La cible, chiffrée quand c'est possible.
+    validations:
+      required: true
+  - type: textarea
+    id: criteres
+    attributes:
+      label: Critères d'acceptation
+      description: |
+        Une liste. Chaque critère est binaire et porte sa ligne « Vérifié par » (une commande, une mesure, un contrôle). Un critère a trois états : vérifié, non vérifié, ou révoqué.
+      placeholder: |
+        - Le critère, en une phrase.
+          Vérifié par : la commande, la mesure ou le contrôle.
+    validations:
+      required: true
+  - type: textarea
+    id: route
+    attributes:
+      label: Route
+      description: Les grandes étapes, dans l'ordre, et les gestes sensibles qu'elles portent. Un petit ticket sans enjeu tient en une ligne.
+    validations:
+      required: true
+  - type: textarea
+    id: hors-perimetre
+    attributes:
+      label: Hors périmètre
+      description: Ce que ce ticket ne fait pas, et où cela va.
+    validations:
+      required: true
+  - type: textarea
+    id: gestes-sensibles
+    attributes:
+      label: Gestes sensibles prévus
+      description: Les gestes irréversibles ou partagés que l'expert fera, avec leurs conditions. Le feu vert est donné une fois, au lancement, pour toute la liste.
+    validations:
+      required: true
+  - type: textarea
+    id: contraintes
+    attributes:
+      label: Contraintes d'exécution
+      description: L'ordre, les fenêtres de temps, les interdits.
+    validations:
+      required: true
+  - type: textarea
+    id: retour-arriere
+    attributes:
+      label: Retour arrière
+      description: Comment défaire, étape par étape, et ce qui ne se défait pas.
+    validations:
+      required: true
+  - type: textarea
+    id: reponses
+    attributes:
+      label: Réponses déjà données
+      description: Les questions déjà tranchées, avec qui a répondu, quand, et ses mots. Elles ne se rouvrent pas.
+    validations:
+      required: true

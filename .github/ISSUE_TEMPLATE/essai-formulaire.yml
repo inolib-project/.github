@@ -1,9 +1,0 @@
-name: Essai formulaire
-description: Essai du 17/10, formulaire par defaut
-body:
-  - type: textarea
-    id: resume
-    attributes:
-      label: Resume
-    validations:
-      required: true
