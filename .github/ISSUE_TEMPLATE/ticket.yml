@@ -89,11 +89,22 @@ body:
       description: Ce que ce ticket ne fait pas, et où cela va.
     validations:
       required: true
+  - type: checkboxes
+    id: gestes-sensibles-liste
+    attributes:
+      label: Gestes sensibles prévus, à cocher
+      description: Coche chaque point d'arrêt que ce ticket prévoit. Ne coche rien si le ticket n'en porte aucun.
+      options:
+        - label: Créer, remplacer ou afficher un secret
+        - label: Supprimer un fichier suivi par Git, ou le déplacer hors du périmètre du ticket
+        - label: Arrêter ou redémarrer un service partagé en production
+        - label: Envoyer quelque chose à un tiers (un mail, un message, un paiement)
+        - label: Changer le schéma d'une base partagée
   - type: textarea
     id: gestes-sensibles
     attributes:
-      label: Gestes sensibles prévus
-      description: Les gestes irréversibles ou partagés que le responsable fera, avec leurs conditions. Le feu vert est donné une fois, au lancement, pour toute la liste.
+      label: Gestes sensibles prévus, conditions
+      description: Pour chaque geste prévu, ses conditions (par exemple « une fois, entre 14 h et 18 h »). Le feu vert est donné une fois, au lancement, pour toute la liste. Écris « aucun » s'il n'y en a pas.
     validations:
       required: true
   - type: textarea
