@@ -4,7 +4,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Chaque rubrique dit quelque chose de vérifiable : une mesure, une commande, un critère avec sa preuve. Une rubrique sans objet s'écrit « sans objet », avec son motif.
+        Chaque rubrique dit quelque chose de vérifiable : une mesure, une commande, un critère avec sa preuve. Une rubrique sans objet s'écrit « sans objet », avec son motif. Le corps du ticket est le contrat : une fois le ticket lancé, le responsable n'y modifie que les cases de la route et la liste « Hygiène » ; tout le reste se dit dans les commentaires.
   - type: textarea
     id: demandeur
     attributes:
@@ -119,6 +119,16 @@ body:
     attributes:
       label: Retour arrière
       description: Comment défaire, étape par étape, et ce qui ne se défait pas.
+    validations:
+      required: true
+  - type: textarea
+    id: hygiene
+    attributes:
+      label: Hygiène
+      description: "Tout ce que le ticket crée et devra effacer : un fichier temporaire, une copie d'essai, un conteneur, une branche, un dépôt ou un ticket d'essai, une séance. Une case par objet, qui dit quoi, où et pourquoi. Le chef y met ce qu'il prévoit ; le responsable ajoute une case dès qu'il crée l'objet, la coche quand il l'a effacé, ou la garde avec son motif."
+      value: |
+        - [ ] Quoi, où : pourquoi il existe, et quand il s'efface.
+        - [ ] La séance d'exécution de ce ticket : fermée à la clôture.
     validations:
       required: true
   - type: textarea
